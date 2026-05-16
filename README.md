@@ -2,6 +2,9 @@
 
 A full-stack implementation of the L'Auberge du Village restaurant platform, engineered with a decoupled architecture focusing on high-performance rendering and state-driven content management.
 
+## Project Purpose
+The objective of this project is to provide a premium, digitally immersive experience for a French gourmet restaurant, bridging traditional hospitality with modern web technologies to drive engagement and streamline reservations.
+
 ## Live Application
 [www.auberge-du-village.fr](https://www.auberge-du-village.fr/)
 
