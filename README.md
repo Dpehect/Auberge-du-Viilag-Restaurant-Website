@@ -2,6 +2,9 @@
 
 A full-stack reconstruction of the L'Auberge du Village restaurant website, emphasizing premium editorial design and modern technical standards.
 
+## Live Demo
+[www.auberge-du-village.fr](https://www.auberge-du-village.fr/)
+
 ## Architecture
 
 The project is architected as a decoupled system consisting of a React-based frontend and a Node.js-based backend.
@@ -23,7 +26,6 @@ A lightweight Node.js/Express environment serving as the data provider.
 - **Core**: React, TypeScript, Node.js, Express.
 - **UI/UX**: Framer Motion, Lucide React, Google Fonts (Cormorant Garamond, Montserrat).
 - **Tooling**: Redux Toolkit, Axios, Vite, Dotenv.
-
 ## Installation and Execution
 
 ### Prerequisites
@@ -46,6 +48,7 @@ npm install
 npm run dev
 ```
 The client defaults to port 5173.
+
 
 ## Design Principles
 
