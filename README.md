@@ -1,55 +1,37 @@
-# L'Auberge du Village - Modern Web Platform
+# L'Auberge du Village - Technical Documentation
 
-A full-stack reconstruction of the L'Auberge du Village restaurant website, emphasizing premium editorial design and modern technical standards.
+A full-stack implementation of the L'Auberge du Village restaurant platform, engineered with a decoupled architecture focusing on high-performance rendering and state-driven content management.
 
-## Live Demo
+## Live Application
 [www.auberge-du-village.fr](https://www.auberge-du-village.fr/)
 
-## Architecture
+## System Architecture
 
-The project is architected as a decoupled system consisting of a React-based frontend and a Node.js-based backend.
+The platform is built as a distributed system comprising a React-based client and a Node.js-based micro-service for content delivery.
 
-### Frontend (Client)
-Built with React 18 and Vite for optimal performance and development speed.
-- **State Management**: Redux Toolkit manages global UI states and handles asynchronous menu data fetching.
-- **Styling**: Utilizes modern Vanilla CSS with a customized design system focused on high-end typography and brand-specific color tokens.
-- **Animations**: Framer Motion is integrated for sophisticated micro-interactions and scroll-based entrance animations.
-- **Navigation**: React Router handles client-side routing, including a specialized sticky bottom navigation for mobile viewport optimization.
+### Frontend Engine (Client)
+The client-side is a Single Page Application (SPA) built with React 18 and TypeScript, utilizing Vite for optimized module bundling and Hot Module Replacement (HMR).
 
-### Backend (Server)
-A lightweight Node.js/Express environment serving as the data provider.
-- **Data Layer**: Stores menu and restaurant metadata in structured JSON format, served via a RESTful API.
-- **Integration**: Handles contact form processing and simulated mail delivery logic.
+- **Global State Orchestration**: Redux Toolkit (RTK) is utilized as the primary state container. It manages the lifecycle of asynchronous data fetching (via `createAsyncThunk`) and synchronizes UI states across the layout, ensuring consistent behavior for navigation and interactive elements.
+- **Dynamic Content Rendering**: Components are designed to be data-driven. The `MenuSection` dynamically parses JSON payloads from the backend to generate complex nested layouts (Menus vs. À La Carte), maintaining strict typing through TypeScript interfaces.
+- **Motion System**: Framer Motion handles the animation orchestration, using a declarative approach to implement scroll-linked reveals, entrance staggers, and GPU-accelerated transitions.
+- **Viewport Optimization**: Implements a hybrid navigation strategy. Desktop users interact with a traditional top-level header, while mobile viewports utilize a specialized sticky bottom bar designed for thumb-friendly interaction and high-conversion reservation access.
 
-## Technology Stack
+### Backend Infrastructure (Server)
+The server layer is a Node.js environment utilizing Express for low-latency API delivery.
 
-- **Core**: React, TypeScript, Node.js, Express.
-- **UI/UX**: Framer Motion, Lucide React, Google Fonts (Cormorant Garamond, Montserrat).
-- **Tooling**: Redux Toolkit, Axios, Vite, Dotenv.
-## Installation and Execution
+- **API Layer**: Exposes RESTful endpoints for structural data delivery. The `menu.json` data layer serves as a flat-file database, enabling rapid content updates without the overhead of a traditional RDBMS for static-heavy content.
+- **Interaction Handling**: Processes POST requests for contact synchronization, implementing basic logging and simulated delivery protocols for user inquiries.
 
-### Prerequisites
-Ensure Node.js and npm are installed on your system.
+## Technical Specifications
 
-### Server Setup
-Navigate to the server directory, install dependencies, and start the development server.
-```bash
-cd server
-npm install
-npm run dev
-```
-The server defaults to port 5000.
+- **Runtime**: Node.js
+- **Frontend Framework**: React 18 (Hooks, Context, Functional Components)
+- **State Management**: Redux Toolkit (Slices, Thunks, Selectors)
+- **Styling**: Modern CSS3 (Variables, Flexbox, Grid, Media Queries)
+- **Iconography**: Lucide React (Vector-based)
+- **Communication**: Axios (Promise-based HTTP client)
 
-### Client Setup
-Navigate to the client directory, install dependencies, and start the Vite dev server.
-```bash
-cd client
-npm install
-npm run dev
-```
-The client defaults to port 5173.
+## Design System Logic
 
-
-## Design Principles
-
-The platform adheres to a "Premium Editorial" aesthetic, utilizing high-resolution imagery and spacious layouts to mirror the upscale nature of the restaurant. Performance is prioritized through efficient state handling and minimal external dependencies.
+The design system follows a "Premium Editorial" methodology. It utilizes a refined ratio-based spacing scale and a specific typographic hierarchy (Cormorant Garamond for headings, Montserrat for UI elements) to establish a high-end visual language. Color tokens are centralized in CSS variables to maintain strict brand consistency across all components.
