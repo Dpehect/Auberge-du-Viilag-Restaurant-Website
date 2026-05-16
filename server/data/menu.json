@@ -1,0 +1,49 @@
+{
+  "categories": [
+    {
+      "id": "menus",
+      "title": "Nos Menus",
+      "items": [
+        {
+          "name": "Menu de l'Auberge",
+          "price": "35€",
+          "description": "Entrée, Plat, Dessert au choix dans la carte.",
+          "details": ["Servi tous les jours sauf jours fériés", "Produits de saison", "Sélection du chef"]
+        },
+        {
+          "name": "Menu Gourmand",
+          "price": "48€",
+          "description": "Un voyage culinaire en 5 étapes.",
+          "details": ["Accord mets et vins possible", "Ingrédients d'exception", "Sur réservation"]
+        }
+      ]
+    },
+    {
+      "id": "carte",
+      "title": "La Carte",
+      "subcategories": [
+        {
+          "name": "Entrées",
+          "items": [
+            { "name": "Escargots de Bourgogne", "price": "14€", "description": "Par 6, beurre persillé maison." },
+            { "name": "Terrine du Moment", "price": "12€", "description": "Accompagnée de ses condiments." }
+          ]
+        },
+        {
+          "name": "Plats",
+          "items": [
+            { "name": "Filet de Bœuf", "price": "28€", "description": "Sauce au poivre, gratin dauphinois." },
+            { "name": "Dos de Cabillaud", "price": "24€", "description": "Beurre blanc, légumes de saison." }
+          ]
+        },
+        {
+          "name": "Desserts",
+          "items": [
+            { "name": "Crème Brûlée", "price": "8€", "description": "À la vanille de Madagascar." },
+            { "name": "Mousse au Chocolat", "price": "8€", "description": "Noir intense, tuile croustillante." }
+          ]
+        }
+      ]
+    }
+  ]
+}
